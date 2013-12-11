@@ -7,3 +7,4 @@ Some notes:
 - index.html works if you're serving it up on a web server
 - header.html is the basic markup you need
 - jQuery is a dependency
+- enquire.js and Susy are also depdencies, but they're included
