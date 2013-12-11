@@ -1,0 +1,1 @@
+jQuery(document).ready(function(){jQuery("#mobile-nav-container #logo-mobile a").click(function(){jQuery("#primary-nav, #product-nav").slideToggle();return!1});enquire.register("screen and (min-width:960px)",function(){jQuery("#primary-nav, #product-nav").attr("style","")})});
