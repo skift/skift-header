@@ -18,7 +18,7 @@ $computer: 960px 24;
 // Base styling
 // ------------------------------------
 
-header#header {
+header#skift-header {
 	font-family: $type-body;
 	margin: 0;
 	padding: 0;
@@ -43,7 +43,7 @@ header#header {
 // Mobile layout
 // ------------------------------------
 
-header#header {
+header#skift-header {
 	@include container($computer);
 	@include span-columns(4 omega,4);
 	height: 100px;
@@ -65,7 +65,7 @@ header#header {
 
 @include at-breakpoint($computer) {
 
-header#header {
+header#skift-header {
 	@include span-columns(20 omega,24);
 	@include prefix(2,24);
 	@include suffix(2,24);
@@ -92,7 +92,7 @@ header#header {
 // Header
 // ------------------------------------
 
-header#header {
+header#skift-header {
 	height: 50px;
 	background-color: $gray1;
 	background-image: url('../img/bg/dark.png');
@@ -162,7 +162,7 @@ header#header {
 }
 
 @include at-breakpoint($computer) {
-header#header {
+header#skift-header {
 	height: 72px;
 	#header-menus {
 		#mobile-nav-container {
