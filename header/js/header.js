@@ -10,9 +10,4 @@ jQuery(document).ready(function() {
 		return false;
 	});
 
-	// Resets any jQuery styling with desktop layout
-	enquire.register("screen and (min-width:960px)", function() {
-		jQuery('#primary-nav, #product-nav').attr('style','');
-	});
-
 });
