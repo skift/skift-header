@@ -127,6 +127,9 @@ header#header {
 			display: none;
 			clear: both;
 			background: $darkgray;
+			&.active {
+				display: block;
+			}
 			ul {
 				margin: 0;
 				text-align: left;
