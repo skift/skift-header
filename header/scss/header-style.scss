@@ -11,14 +11,14 @@
 
 $total-columns: 12;
 $grid-padding: 0;
-// $tablet: 480px;
 $computer: 960px 24;
 
 // ------------------------------------
 // Base styling
 // ------------------------------------
 
-header#skift-header {
+#skift-header {
+	display: block;
 	font-family: $type-body;
 	margin: 0;
 	padding: 0;
@@ -37,13 +37,11 @@ header#skift-header {
 	}
 }
 
-
-
 // ------------------------------------
-// Mobile layout
+// Layout
 // ------------------------------------
 
-header#skift-header {
+#skift-header {
 	@include container($computer);
 	@include span-columns(4 omega,4);
 	height: 100px;
@@ -57,42 +55,33 @@ header#skift-header {
 			display: none;
 		}
 	}
-}
-
-// ------------------------------------
-// Desktop layout
-// ------------------------------------
-
-@include at-breakpoint($computer) {
-
-header#skift-header {
-	@include span-columns(20 omega,24);
-	@include prefix(2,24);
-	@include suffix(2,24);
-	height: 72px;
-	#header-menus {
-		#logo {
-			@include span-columns(4,20);
-			display: block;
-		}
-		#primary-nav {
-			@include span-columns(11,20);
-			display: block;
-		}
-		#product-nav {
-			@include span-columns(5 omega,20);
-			display: block;
+	@include at-breakpoint($computer) {
+		@include span-columns(20 omega,24);
+		@include prefix(2,24);
+		@include suffix(2,24);
+		height: 72px;
+		#header-menus {
+			#logo {
+				@include span-columns(4,20);
+				display: block;
+			}
+			#primary-nav {
+				@include span-columns(11,20);
+				display: block;
+			}
+			#product-nav {
+				@include span-columns(5 omega,20);
+				display: block;
+			}
 		}
 	}
-}
-
 }
 
 // ------------------------------------
 // Header
 // ------------------------------------
 
-header#skift-header {
+#skift-header {
 	height: 50px;
 	background-color: $gray1;
 	background-image: url('../img/bg/dark.png');
@@ -159,128 +148,125 @@ header#skift-header {
 			}
 		}
 	}
-}
-
-@include at-breakpoint($computer) {
-header#skift-header {
-	height: 72px;
-	#header-menus {
-		#mobile-nav-container {
-			display: none;
-		}
-		#logo {
-			margin: 0;
-			display: block;
-			a {
-				display: block;
-				height: 72px;
-				background-image: url('../img/skift-logo.png');
-				background-position: center left;
-				background-size: contain;
-				background-repeat: no-repeat;
-				&:hover {
-					text-decoration: none;
-				}
-				h1 {
-					width: 100%;
-					height: 44px;
-					margin: 0;
-					color: transparent;
-					font-size: 0;
-				}
-				p {
-					display: block;
-					height: 16px;
-					margin: 0;
-					padding-left: 30%;
-					color: $lightgray;
-					text-transform: uppercase;
-					white-space: nowrap;
-					font-size: 13px;
-					line-height: 13px;
-				}
+	@include at-breakpoint($computer) {
+		height: 72px;
+		#header-menus {
+			#mobile-nav-container {
+				display: none;
 			}
-		}
-		#primary-nav, #product-nav {
-			display: block;
-			clear: none;
-			height: 72px;
-			background: none;
-			ul {
-				width: 100%;
-				height: 72px;
+			#logo {
 				margin: 0;
-				border: 0;
-				text-align: center;
-				li {
-					display: inline-block;
-					padding: 0 2% 0 0;
-					border: 0;
-					&:last-child {
-						padding: 0;
-					}
-					a {
-						font-size: 14px;
-						&:hover {
-							text-decoration: none;
-						}
-					}
-				}
-			}
-		}
-		#primary-nav {
-			ul li {
-				padding-right: 36px;
-				background-image: url('../img/sprites/slash-sep.png');
-				background-position: right 9px top 45%;
-				background-repeat: no-repeat;
-				&:last-child {
-					background-image: none;
-				}
+				display: block;
 				a {
-					color: $yellow;
-					text-transform: uppercase;
-					font-weight: bold;
-					line-height: 72px;
+					display: block;
+					height: 72px;
+					background-image: url('../img/skift-logo.png');
+					background-position: center left;
+					background-size: contain;
+					background-repeat: no-repeat;
 					&:hover {
-						color: $light-yellow;
+						text-decoration: none;
+					}
+					h1 {
+						width: 100%;
+						height: 44px;
+						margin: 0;
+						color: transparent;
+						font-size: 0;
+					}
+					p {
+						display: block;
+						height: 16px;
+						margin: 0;
+						padding-left: 30%;
+						color: $lightgray;
+						text-transform: uppercase;
+						white-space: nowrap;
+						font-size: 13px;
+						line-height: 13px;
 					}
 				}
 			}
-		}
-		#product-nav {
-			text-align: center;
-			ul {
-				display: table;
-				width: 100%;
-				height: 36px;
-				margin: 18px 0;
-				border-bottom: 1px solid $light-blue;
-				background-color: $blue;
-				li {
-					display: table-cell;
-					height: 36px;
-					border-right: 1px solid $dark-blue;
-					border-left: 1px solid $light-blue;
+			#primary-nav, #product-nav {
+				display: block;
+				clear: none;
+				height: 72px;
+				background: none;
+				ul {
+					width: 100%;
+					height: 72px;
+					margin: 0;
+					border: 0;
 					text-align: center;
-					white-space: nowrap;
-					line-height: 36px;
-					a {
-						color: $white;
-						font-weight: normal;
-						&:hover {
-							color: $offwhite-light;
+					li {
+						display: inline-block;
+						padding: 0 2% 0 0;
+						border: 0;
+						&:last-child {
+							padding: 0;
+						}
+						a {
+							font-size: 14px;
+							&:hover {
+								text-decoration: none;
+							}
 						}
 					}
-					&:first-child {
-						border-left: none;
-					}
+				}
+			}
+			#primary-nav {
+				ul li {
+					padding-right: 36px;
+					background-image: url('../img/sprites/slash-sep.png');
+					background-position: right 9px top 45%;
+					background-repeat: no-repeat;
 					&:last-child {
-						border-right: none;
+						background-image: none;
+					}
+					a {
+						color: $yellow;
+						text-transform: uppercase;
+						font-weight: bold;
+						line-height: 72px;
+						&:hover {
+							color: $light-yellow;
+						}
+					}
+				}
+			}
+			#product-nav {
+				text-align: center;
+				ul {
+					display: table;
+					width: 100%;
+					height: 36px;
+					margin: 18px 0;
+					border-bottom: 1px solid $light-blue;
+					background-color: $blue;
+					li {
+						display: table-cell;
+						height: 36px;
+						border-right: 1px solid $dark-blue;
+						border-left: 1px solid $light-blue;
+						text-align: center;
+						white-space: nowrap;
+						line-height: 36px;
+						a {
+							color: $white;
+							font-weight: normal;
+							&:hover {
+								color: $offwhite-light;
+							}
+						}
+						&:first-child {
+							border-left: none;
+						}
+						&:last-child {
+							border-right: none;
+						}
 					}
 				}
 			}
 		}
 	}
-}
 }
